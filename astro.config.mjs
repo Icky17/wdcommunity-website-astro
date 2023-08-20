@@ -52,7 +52,7 @@ export default defineConfig({
           'database',
         ],
         ri: ['twitter-fill', 'facebook-box-fill', 'linkedin-box-fill', 'whatsapp-fill', 'mail-fill'],
-        local: '~/assets/images/icons/', // Add your local icon set configuration here
+        local: '/src/assets/images/icons/', // Add your local icon set configuration here
       },
     }),
 
