@@ -1,6 +1,6 @@
 site:
   name: WDC
-  site: 'https://astrowind.vercel.app'
+  site: 'https://wdcommunitynew.netlify.app/'
   base: '/'
   trailingSlash: false
 
@@ -11,7 +11,7 @@ metadata:
   title:
     default: WDC - Western Digital Community
     template: '%s — WDC - Western Digital Community'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "\U0001F680 Website for the WDC - Western Digital Community."
   robots:
     index: true
     follow: true

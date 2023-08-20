@@ -4,11 +4,11 @@ export const headerData = {
   links: [
     {
       text: 'Home',
-      href: '#',
+      href: '/',
     },
     {
       text: 'About',
-      href: '/',
+      href: '/about',
     },
     {
       text: 'Packages',
@@ -23,7 +23,7 @@ export const headerData = {
       href: getPermalink('/#contribute'),
     },
   ],
-  actions: [{ icon: 'tabler:brand-github', type: 'button', text: 'Source Code', href: 'https://github.com/Icky17/astro-wdcommunity-website' }],
+  actions: [{ icon: 'tabler:brand-github', type: 'button', text: 'Source Code', href: 'https://github.com/Icky17/wdcommunity-website-astro' }],
 };
 
 export const footerData = {
