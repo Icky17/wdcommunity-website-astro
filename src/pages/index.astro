@@ -1,0 +1,230 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+// import FAQs from '~/components/widgets/FAQs.astro';
+
+// AstroWind — Free template for creating websites with Astro + Tailwind CSS
+
+const metadata = {
+  title: 'WDC - Western Digital Community',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    callToAction={{ text: 'GitHub', href: 'https://github.com/wdcommunity/wdpksrc', icon: 'tabler:brand-github' }}
+    image={{ 
+      class: 'img-responsive mx-auto',
+      src: '~/assets/images/wd-products.png', 
+      alt: 'WD Products',
+      aspectRatio: 2.18,
+      // Set width to 100% and height to auto
+      //class: 'max-w-md mx-auto' Set width to 100% and height to auto // 'w-full h-auto'
+      //aspect-ratio: 'auto',
+      }}
+  >
+    <Fragment slot="title">
+      <span class="hidden xl:inline" style="color: #FD1859;">Western</span>
+      <span class="hidden xl:inline" style="color: #995CFF;">Digital</span>
+      <span class="hidden xl:inline" style="color: #5CA7FA;">Community.</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">The WDC</span> website is a 3rd party website with the links to different 
+        repositories for the WD MyCloud (gen 2.x firmware). Packages are provided for free and made by developers on 
+        their free time.<br><br>
+        <span class="font-semibold">The source is available on Github.</span>
+      </span>
+    </Fragment>
+    <!-- Add the "img-responsive" class to make the image smaller -->
+    <img class="img-responsive" src="~/assets/images/wd-products.png" alt="WD Products">
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Packages"
+    subtitle="Download an application binary. Go to the WD web GUI, select the Applications tab and select Manual Install."
+    tagline="All packages"
+    id="packages"
+    items={[
+      {
+        title: 'Cops',
+        // style: 'font-size: 8px',
+        // icon: '<img src="~/assets/images/icons/cops.png" alt="Cops Icon" class="w-8 h-8">',
+        // icon: 'local:cops.png',
+        description: `
+        <div class="flex justify-center">
+          <ul class="list-disc list-inside inline-block space-y-2">
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/MyCloudEX2Ultra_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">MyCloudEX2Ultra_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/MyCloudPR2100_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">MyCloudPR2100_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/MyCloudPR4100_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">MyCloudPR4100_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/WDMyCloudDL2100_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudDL2100_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/WDMyCloudDL4100_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudDL4100_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/WDMyCloudEX2100_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudEX2100_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/WDMyCloudEX2_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudEX2_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/WDMyCloudEX4100_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudEX4100_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/WDMyCloudEX4_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudEX4_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/WDMyCloudMirrorGen2_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudMirrorGen2_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/WDMyCloudMirror_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudMirror_cops_0.04.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cops-v0.04/WDMyCloud_cops_0.04.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloud_cops_0.04.bin</a></li>
+          </ul>
+        </div>
+      `,
+      },
+      {
+        title: 'Couchpotato',
+        description: `
+        <div class="flex justify-center">
+          <ul class="list-disc list-inside inline-block space-y-2">
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/MyCloudEX2Ultra_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">MyCloudEX2Ultra_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/MyCloudPR2100_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">MyCloudPR2100_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/MyCloudPR4100_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">MyCloudPR4100_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/WDMyCloudDL2100_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudDL2100_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/WDMyCloudDL4100_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudDL4100_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/WDMyCloudEX2100_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudEX2100_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/WDMyCloudEX2_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudEX2_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/WDMyCloudEX4100_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudEX4100_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/WDMyCloudEX4_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudEX4_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/WDMyCloudMirrorGen2_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudMirrorGen2_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/WDMyCloudMirror_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudMirror_couchpotato_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/couchpotato-v0.02/WDMyCloud_couchpotato_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloud_couchpotato_0.02.bin</a></li>
+          </ul>
+        </div>
+      `,
+      },
+      {
+        title: 'Cuberite',
+        description: `
+        <div class="flex justify-center">
+          <ul class="list-disc list-inside inline-block space-y-2">
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cuberite-v0.02/MyCloudPR2100_cuberite_0.02.bin" class="hover:underline hover:text-blue-800 transition">MyCloudPR2100_cuberite_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cuberite-v0.02/MyCloudPR4100_cuberite_0.02.bin" class="hover:underline hover:text-blue-800 transition">MyCloudPR4100_cuberite_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cuberite-v0.02/WDMyCloudDL2100_cuberite_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudDL2100_cuberite_0.02.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/cuberite-v0.02/WDMyCloudDL4100_cuberite_0.02.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudDL4100_cuberite_0.02.bin</a></li>
+          </ul>
+        </div>
+      `,
+      },
+      {
+        title: 'Docker',
+        description: `
+        <div class="flex justify-center">
+          <ul class="list-disc list-inside inline-block space-y-2">
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/docker-v20.10.14/MyCloudEX2Ultra_docker_20.10.14.bin" class="hover:underline hover:text-blue-800 transition">MyCloudEX2Ultra_docker_20.10.14.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/docker-v20.10.14/MyCloudPR2100_docker_20.10.14.bin" class="hover:underline hover:text-blue-800 transition">MyCloudPR2100_docker_20.10.14.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/docker-v20.10.14/MyCloudPR4100_docker_20.10.14.bin" class="hover:underline hover:text-blue-800 transition">MyCloudPR4100_docker_20.10.14.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/docker-v20.10.14/WDMyCloudDL2100_docker_20.10.14.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudDL2100_docker_20.10.14.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/docker-v20.10.14/WDMyCloudDL4100_docker_20.10.14.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudDL4100_docker_20.10.14.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/docker-v20.10.14/WDMyCloudEX2100_docker_20.10.14.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudEX2100_docker_20.10.14.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/docker-v20.10.14/WDMyCloudEX4100_docker_20.10.14.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudEX4100_docker_20.10.14.bin</a></li>
+            <li><a href="https://github.com/WDCommunity/wdpksrc/releases/download/docker-v20.10.14/WDMyCloudMirrorGen2_docker_20.10.14.bin" class="hover:underline hover:text-blue-800 transition">WDMyCloudMirrorGen2_docker_20.10.14.bin</a></li>
+          </ul>
+        </div>
+      `,
+      },
+      {
+        title: 'Features',
+        description:
+          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Content',
+        description:
+          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Pricing',
+        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Testimonial',
+        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contact',
+        description:
+          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Footers',
+        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-red-300 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- More Apps Widget ******************* -->
+
+  <Features
+  title="More Apps"
+  tagline="More Sources"
+  subtitle="Here are some links to different sources / apps."
+  id="apps"
+  items={[
+    {
+      description: `
+        <div class="flex justify-center">
+          <ul class="list-disc list-inside inline-block pl-50">
+            <li>Allester Fox' <a href="https://fox-exe.ru/" class="text-blue-600 hover:underline hover:text-blue-800 transition">Website</a></li>
+            <li>Hashashin's <a href="https://github.com/hashashin/mycloudapps" class="text-blue-600 hover:underline hover:text-blue-800 transition">Repository</a></li>
+            <li><a href="https://wdnas.lampir.dev/" class="text-blue-600 hover:underline hover:text-blue-800 transition">Lampir's packages</a></li>
+            <li><a href="https://emby.media/" class="text-blue-600 hover:underline hover:text-blue-800 transition">Emby</a> Media Server</li>
+            <li><a href="https://www.zerotier.com/download/" class="text-blue-600 hover:underline hover:text-blue-800 transition">ZeroTier VPN</a></li>
+          </ul>
+        </div>
+      `,
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-purple-100 dark:bg-transparent"></div>
+  </Fragment>
+</Features>
+
+  <!-- Contribute Widget ******************* -->
+
+  <Features3
+  title="Contribute"
+  id="contribute"
+  tagline=""
+>
+<Fragment slot="subtitle">
+  <span class="hidden sm:inline">
+    Contribute to our project on GitHub and help improve it 
+    through bug reports, code patches, and feature requests on our 
+    <a 
+        href="https://github.com/WDCommunity/wdpksrc/issues"
+        class="text-blue-600 hover:underline hover:text-blue-800 transition"
+      > issues section</a>. Your support drives our development. 
+  </span>
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-100 dark:bg-transparent"></div>
+</Fragment>
+</Features3>
+
+</Layout>
