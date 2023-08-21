@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src=".github/img/logo-website.png" alt="WDCommunity Website" width="100"></a>
+  <img src=".github/img/logo-website.png" alt="WDCommunity Website" width="100"></a>
   <br>
   WDCommunity Website
   <br>
