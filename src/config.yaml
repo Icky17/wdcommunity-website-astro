@@ -1,6 +1,6 @@
 site:
   name: WDC
-  site: 'https://wdcommunitynew.netlify.app/'
+  site: 'https://wdcommunity.vercel.app/'
   base: '/'
   trailingSlash: false
 
